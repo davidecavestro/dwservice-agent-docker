@@ -1,0 +1,27 @@
+= dwservice-agent-docker - A way to containerize dwservice
+
+
+== What's this?
+
+This repo provides some config and a script to package the dwservice agent
+into a docker image and run it.
+
+
+== How to use it?
+
+Create a new agent from https://github.com/dwservice/agent[dwservice] UI 
+and take note of the agent code.
+
+Copy the `.env.example` file into `.env`, updating the AGENT_CODE variable.
+
+Adapt the docker-compose.yml entries as per your needs
+(i.e. use `privileged: true`, `network_mode: "host"`, set a `restart_policy`).
+
+Finally run `docker-compose build && docker-compose up`.
+
+
+== License
+
+This software is released under the MIT License.
+
+All trademarks and product names are the property of their respective owners.

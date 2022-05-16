@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  dwservice:
+    image: dwservice
+    build:
+      context: .
+      args:
+      - PKGS=${PKGS:-}
+#    privileged: true
+#    network_mode: "host"
+    environment:
+    - 'AGENT_CODE=${AGENT_CODE:-X9X-X9X-X9X}'
+    - 'CFG_FOLDER=/config'
+    volumes:
+    - './config:/config'

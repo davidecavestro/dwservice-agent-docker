@@ -26,7 +26,7 @@ if [ "$should_create_config" = true ]; then
   # Create config
   echo "Generating config"
   rm -f "$CFG"
-  printf "$AGENT_CODE\n" | python2.7 /app/make/create_config.py
+  printf "$AGENT_CODE\n" | python3 /app/make/create_config.py
   echo "Moving generated file to config folder"
   mv /app/core/config.json $CFG
 fi
@@ -36,4 +36,4 @@ ln -s $CFG /app/core/config.json
 
 # Launch agent
 echo "Launching agent"
-python2.7 /app/core/agent.py
+python3 /app/core/agent.py

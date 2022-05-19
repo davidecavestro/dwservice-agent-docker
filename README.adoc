@@ -1,8 +1,5 @@
 = dwservice-agent-docker - A way to containerize dwservice
 
-CAUTION: Please note this is a work-in-progress, currently bound to the last commit
-of dwservice's master that compiles with python 2.7 on debian bullseye.
-
 == What's this?
 
 This repo provides some config and a script to package the dwservice agent
